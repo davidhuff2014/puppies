@@ -81,6 +81,7 @@ GEM
     page_navigation (0.9)
       data_magic (>= 0.14)
     polyglot (0.3.5)
+    populator (1.0.0)
     rack (1.4.5)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -170,6 +171,7 @@ DEPENDENCIES
   jquery-rails
   json_pure
   page-object
+  populator
   rails (= 3.2.1)
   rspec
   rspec-rails

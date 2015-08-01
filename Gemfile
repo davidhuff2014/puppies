@@ -20,6 +20,7 @@ end
 
 group :development, :test do
   gem 'rspec-rails'
+  gem 'populator'
 end
 
 group :test do
