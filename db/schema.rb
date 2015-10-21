@@ -16,16 +16,16 @@ ActiveRecord::Schema.define(:version => 20110910210004) do
   create_table "adoptions", :force => true do |t|
     t.integer  "puppy_id"
     t.integer  "cart_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                  :null => false
+    t.datetime "updated_at",                  :null => false
     t.integer  "quantity",     :default => 1
     t.integer  "order_id"
     t.datetime "delivered_on"
   end
 
   create_table "carts", :force => true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "orders", :force => true do |t|
@@ -33,8 +33,8 @@ ActiveRecord::Schema.define(:version => 20110910210004) do
     t.text     "address"
     t.string   "email"
     t.string   "pay_type"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",             :null => false
+    t.datetime "updated_at",             :null => false
     t.boolean  "has_children"
     t.boolean  "has_other_pets"
     t.string   "other_pets_description"
@@ -47,16 +47,16 @@ ActiveRecord::Schema.define(:version => 20110910210004) do
     t.string   "gender"
     t.string   "image_url"
     t.decimal  "fees",        :precision => 8, :scale => 2
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                                :null => false
+    t.datetime "updated_at",                                :null => false
   end
 
   create_table "users", :force => true do |t|
     t.string   "name"
     t.string   "hashed_password"
     t.string   "salt"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
   end
 
 end
